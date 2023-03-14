@@ -7,6 +7,8 @@ import Calendar from './components/Calendar';
 import Tournaments from './components/Tournaments';
 import Home from './components/Home';
 import {Route, Routes} from "react-router"
+import Solo from './components/solo';
+import Team from './components/team';
 
 
 
@@ -19,6 +21,8 @@ function App() {
       <Route path="Home" element={<Home />} />
       <Route path="Calendar" element={<Calendar />} />
       <Route path="Tournaments" element={<Tournaments />} />
+      <Route path="Tournaments/Solo" element={<Solo />} />
+      <Route path="Tournaments/Team" element={<Team />} />
     </Routes>
 
     <Spodek/>
