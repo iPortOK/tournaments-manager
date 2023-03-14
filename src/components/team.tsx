@@ -1,7 +1,7 @@
 import Typography from '@mui/material/Typography';
 import React from 'react';
 
-const Calendar: React.FC = () => {
+const Team: React.FC = () => {
   return (
     <div>
       <Typography variant="h1">Welcome to my website!</Typography>
@@ -11,4 +11,4 @@ const Calendar: React.FC = () => {
   );
 }
 
-export default Calendar;
+export default Team;
