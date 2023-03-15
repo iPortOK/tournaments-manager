@@ -59,7 +59,7 @@ const Navbar = () => {
         <Toolbar disableGutters>
  
         <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-            <img src='./img/logo1.png'  width="90" height="90"></img>
+            <img src='../img/logo1.png'  width="90" height="90"></img>
         </Box>
         
           <Typography
@@ -141,7 +141,7 @@ const Navbar = () => {
             </Menu>
           </Box>
           <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-          <img src='./img/logo1.png'  width="80" height="80"></img>
+          <img src='../img/logo1.png'  width="80" height="80"></img>
           </Box>
           <Typography
             variant="h4"

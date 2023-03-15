@@ -9,6 +9,7 @@ import Home from './components/Home';
 import {Route, Routes} from "react-router"
 import Solo from './components/solo';
 import Team from './components/team';
+import Players from './components/players';
 
 
 
@@ -23,6 +24,7 @@ function App() {
       <Route path="Tournaments" element={<Tournaments />} />
       <Route path="Tournaments/Solo" element={<Solo />} />
       <Route path="Tournaments/Team" element={<Team />} />
+      <Route path="Players" element={<Players />} />
     </Routes>
 
     <Spodek/>

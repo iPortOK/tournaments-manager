@@ -52,13 +52,24 @@ const Solo: React.FC = () => {
       </Tabs>
       
       {selectedTab === 0 && (
-        <Grid container spacing={2} sx={{ p: 4 }}>
+        <Grid container spacing={2} sx={{ p: 5, pl:{xs:5, sm:10}, pr:{xs:5, sm:10} }}>
           <Grid item xs={12} sm={6}>
             <Typography variant="h2" component="h2" sx={{fontWeight:750, pr: { xs: 0, sm: 2 } }}>
               EU TEAM CONQUEST TOURNAMENT
             </Typography>
             <Typography variant="h4" component="h2" sx={{ pr: { xs: 0, sm: 2 } }}>
-              14.03.2023 // 19:00 CEST
+            March 12 (Sunday) 19:00 CET
+            </Typography>
+            <Typography variant="h6" component="h2" sx={{ pr: { xs: 0, sm: 2 }, pt:5, }}>
+            <Typography>
+             Check out  quick-rules for more information.
+            </Typography>
+            🔶 Prizepool:<br></br>
+                </Typography>
+            <Typography>
+                1st place: 2000 gems<br></br>
+                2nd place: 1200 gems<br></br>
+                3rd place: 800 gems
             </Typography>
           </Grid>
           <Grid item xs={12} sm={6}>
