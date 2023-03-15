@@ -15,7 +15,7 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { shadows } from '@mui/system';
 
-const pages = ['Home', 'Tournaments', 'Calendar', 'About Us'];
+const pages = ['Home', 'Tournaments', 'Players', 'LFT','About-Us'];
 const settings = ['Profile', 'Logout'];
 
 const Navbar = () => {

@@ -3,7 +3,6 @@ import { ThemeProvider } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import theme from './theme';
 import Button from '@mui/material/Button';
-import './home.css';
 import { border, Container } from '@mui/system';
 import Navbar from './Navbar';
 import { Box } from '@mui/material';

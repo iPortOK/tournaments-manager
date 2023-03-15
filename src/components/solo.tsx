@@ -8,11 +8,37 @@ import TextField from '@mui/material/TextField';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Button from '@mui/material/Button';
+import { Box, Card, CardContent } from '@mui/material';
+import TeamCard from './teamcard';
+
+
+const tabsy = ["Sign-Ups", "Quick Rules", "Teams", "Bracket", "Results"];
+
+const teamData = [
+  {
+    teamName: 'Team A',
+    names: ['John', 'Mary', 'David', 'Sarah', 'Tom']
+  },
+  {
+    teamName: 'Team B',
+    names: ['Mike', 'Jennifer', 'Chris', 'Jessica', 'Nick']
+  },
+  {
+    teamName: 'Team A',
+    names: ['John', 'Mary', 'David', 'Sarah', 'Tom']
+  },
+  {
+    teamName: 'Team B',
+    names: ['Mike', 'Jennifer', 'Chris', 'Jessica', 'Nick']
+  },
+  {
+    teamName: 'Team A',
+    names: ['John', 'Mary', 'David', 'Sarah', 'Tom']
+  },
+];
 
 const Solo: React.FC = () => {
   const [selectedTab, setSelectedTab] = useState(0);
-
-  const tabsy = ["Sign-Ups", "Quick Rules", "Rosters", "Bracket", "Results"];
 
   const handleTabChange = (event: React.SyntheticEvent, newValue: number) => {
     setSelectedTab(newValue);
@@ -88,10 +114,45 @@ const Solo: React.FC = () => {
         </Grid>
       )}
       {selectedTab === 1 && (
-        <Typography>This is the content of Tab 2</Typography>
+          <Box sx={{p: 5, pl:{xs:5, sm:10}, pr:{xs:5, sm:10} }} >
+            <Typography variant="h2" component="h2" sx={{fontWeight:750, pr: { xs: 0, sm: 2 } }}>
+            QUICK RULES
+            </Typography>
+            <Typography variant="h4" component="h2" sx={{ pr: { xs: 0, sm: 2 } }}>
+            Custom Game Settings
+            </Typography>
+            <Typography variant="h6" component="h2" sx={{ pr: { xs: 0, sm: 2 }, pt:5, }}>
+            <Typography>
+            Match Type: Joust 
+            <br></br>Team Size 2v2
+            <br></br>Player Pick: Draft - 8 Bans
+            <br></br>Starting Level: Level 3
+            <br></br>Starting Gold: 1500
+            <br></br>Pause Type: Normal
+            <br></br>Region: Europe
+            <br></br>Allow Spectators/Record Demo: On
+            <br></br>Low Delay: Off
+            <br></br>No Spectator Password
+            </Typography>
+                </Typography>
+            <Typography>
+            🔸 All games are Best of 1<br></br>
+            🔸 No surrender before the 10 minute mark<br></br>
+            🔸 If a team doesn't show up in 10 minutes, they get disqualifed<br></br>
+            </Typography>
+          </Box>
       )}
       {selectedTab === 2 && (
-        <Typography>This is the content of Tab 3</Typography>
+        <div style={{
+          display: 'flex',
+          justifyContent: 'center',
+          flexWrap: 'wrap',
+          marginTop:20
+        }}> 
+      {teamData.map((team, index) => (
+        <TeamCard key={index} teamName={team.teamName} names={team.names} />
+      ))}
+    </div>
       )}
        {selectedTab === 3 && (
         <Typography>This is the content of Tab 4</Typography>
