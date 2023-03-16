@@ -10,6 +10,8 @@ import {Route, Routes} from "react-router"
 import Solo from './components/solo';
 import Team from './components/team';
 import Players from './components/players';
+import Lft from './components/lft';
+import Aboutus from './components/aboutus';
 
 
 
@@ -25,6 +27,8 @@ function App() {
       <Route path="Tournaments/Solo" element={<Solo />} />
       <Route path="Tournaments/Team" element={<Team />} />
       <Route path="Players" element={<Players />} />
+      <Route path="LFT" element={<Lft />} />
+      <Route path="About-Me" element={<Aboutus />} />
     </Routes>
 
     <Spodek/>

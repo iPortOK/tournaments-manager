@@ -14,7 +14,7 @@ const Home: React.FC = () => {
     <div
       style={{
         backgroundImage: 'linear-gradient(rgba(240, 138, 18, 0.2), rgba(0, 0, 0, 1)), url(https://images5.alphacoders.com/127/1272384.jpg)',
-        height: '100vh',
+        minHeight: '100vh', 
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'

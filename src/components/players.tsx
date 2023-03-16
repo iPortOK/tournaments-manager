@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { makeStyles, TextField, TableSortLabel, Box } from '@mui/material';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
 import theme from './theme';
+import './style.css';
 import { ThemeProvider } from '@emotion/react';
 import Navbar from './Navbar';
 
@@ -71,7 +72,7 @@ function PlayerTable() {
   <div
     style={{
       position: "relative",
-      height: "100vh",
+      minHeight: '100vh', 
       overflow: "hidden",
     }}
   >
@@ -83,29 +84,30 @@ function PlayerTable() {
         width: "100%",
         height: "100%",
         backgroundImage:
-          "linear-gradient(rgba(240, 138, 18, 0.1), rgba(0, 0, 0, 0.5)), url(https://mobimg.b-cdn.net/v3/fetch/d8/d825007dc211613c1cdab8e32568881d.jpeg)",
+          "linear-gradient(rgba(240, 138, 18, 0.4), rgba(0, 0, 0, 0.9)), url(https://mobimg.b-cdn.net/v3/fetch/d8/d825007dc211613c1cdab8e32568881d.jpeg)",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         opacity: 0.2,
+        zIndex:'-1',
       }}
     ></div>
     
-    <Box sx={{ display: "flex", justifyContent: "center", p:2 }}>
+    <Box sx={{ display: "flex", justifyContent: "center", pt:4, pb:1 }}>
     <TextField label="Filter by name" value={filter} onChange={handleFilterChange}/>
     </Box>
  
     <Box sx={{ display: "flex", justifyContent: "center" }}>
-      <TableContainer component={Paper} sx={{ maxWidth: 1400 }}>
+      <TableContainer component={Paper} sx={{ maxWidth: 1400, backgroundColor: 'rgba(255, 255, 255, 0.3)' }}>
         <Table aria-label="player table">
-          <TableHead>
+          <TableHead sx={{backgroundColor: 'rgba(240, 138, 18, 1)'}}>
             <TableRow>
               {headCells.map((headCell) => (
                 <TableCell
                   key={headCell.id}
                   sortDirection={orderBy === headCell.id ? order : false}
                 >
-                  <TableSortLabel
+                  <TableSortLabel 
                     active={orderBy === headCell.id}
                     direction={orderBy === headCell.id ? order : "asc"}
                     onClick={() => handleSortClick(headCell.id)}
@@ -118,13 +120,13 @@ function PlayerTable() {
           </TableHead>
           <TableBody>
             {sortedPlayerData.map((row) => (
-              <TableRow key={row.name}>
-                <TableCell component="th" scope="row">
+              <TableRow key={row.name} className="table-row">
+                <TableCell component="th" scope="row" className="kills-cell">
                   {row.name}
                 </TableCell>
-                <TableCell>{row.kills}</TableCell>
-                <TableCell>{row.deaths}</TableCell>
-                <TableCell>{row.assists}</TableCell>
+                <TableCell className="kills-cell">{row.kills}</TableCell>
+                <TableCell className="kills-cell">{row.deaths}</TableCell>
+                <TableCell className="kills-cell">{row.assists}</TableCell>
               </TableRow>
             ))}
           </TableBody>

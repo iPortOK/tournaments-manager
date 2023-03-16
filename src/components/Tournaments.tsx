@@ -29,7 +29,7 @@ const Tournaments = () => {
         style={{
           backgroundImage:
             'linear-gradient(rgba(240, 138, 18, 0.0), rgba(0, 0, 0, 1)), url(https://images4.alphacoders.com/997/thumb-1920-997792.jpg)',
-          height: '100vh',
+          minHeight: '100vh', 
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',

@@ -49,7 +49,7 @@ const Solo: React.FC = () => {
      <div
       style={{
         position: 'relative',
-        height: '100vh',
+        minHeight: '100vh', 
         overflow: 'hidden', 
       }}
     >
@@ -66,6 +66,7 @@ const Solo: React.FC = () => {
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           opacity: 0.2, 
+          zIndex:'-1',
         }}
       ></div>
 

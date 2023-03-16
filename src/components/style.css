@@ -1,0 +1,7 @@
+.kills-cell {
+    color: black;
+    font-weight: 500;
+  }
+  .table-row:hover {
+    background-color: rgba(240, 138, 18, 0.2);
+  }

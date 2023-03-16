@@ -15,7 +15,7 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { shadows } from '@mui/system';
 
-const pages = ['Home', 'Tournaments', 'Players', 'LFT','About-Us'];
+const pages = ['Home', 'Tournaments', 'Players', 'LFT','About-Me'];
 const settings = ['Profile', 'Logout'];
 
 const Navbar = () => {
@@ -180,9 +180,9 @@ const Navbar = () => {
             ))}
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+          <Box sx={{ flexGrow: 0}}>
+            <Tooltip title="Open">
+              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}> 
                 <Avatar alt="Port" src="/static/images/avatar/2.jpg" />
               </IconButton>
             </Tooltip>
