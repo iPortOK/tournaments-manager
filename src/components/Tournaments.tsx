@@ -12,13 +12,13 @@ const Tournaments = () => {
     {
       text: 'Solo',
       color: '240, 138, 18',
-      link: 'Solo',
+      link: 'solo',
       next: 'The next tournament:',
     },
     {
       text: 'Team',
       color: '39, 99, 245',
-      link: 'Team',
+      link: 'team',
       next: 'The next tournament:',
     },
   ];

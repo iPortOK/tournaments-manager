@@ -2,10 +2,10 @@ import { ThemeProvider } from '@emotion/react';
 import { Box } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import React from 'react';
-import Navbar from './Navbar';
-import theme from './theme';
+import Navbar from '../Navbar';
+import theme from '../theme';
 
-const aboutus: React.FC = () => {
+const AboutUs: React.FC = () => {
   return (
     
     <ThemeProvider theme={theme}>
@@ -63,4 +63,4 @@ const aboutus: React.FC = () => {
   );
 }
 
-export default aboutus;
+export default AboutUs;

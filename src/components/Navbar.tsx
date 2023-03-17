@@ -12,16 +12,13 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
-import { shadows } from '@mui/system';
 
-const pages = ['Home', 'Tournaments', 'Players', 'LFT','About-Me'];
+const pages = ['home', 'tournaments', 'players', 'lft','about-us'];
 const settings = ['Profile', 'Logout'];
 
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
-  const [appBarImage, setAppBarImage] = useState("./img/a1.jpg");
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);

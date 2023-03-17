@@ -10,6 +10,7 @@ import Tab from '@mui/material/Tab';
 import Button from '@mui/material/Button';
 import { Box, Card, CardContent } from '@mui/material';
 import TeamCard from './teamcard';
+import TournamentBracket from './bracket';
 
 
 const tabsy = ["Sign-Ups", "Quick Rules", "Teams", "Bracket", "Results"];
@@ -37,6 +38,17 @@ const teamData = [
   },
 ];
 
+const teams = [
+  { name: "Team 1", seed: 1 },
+  { name: "Team 2", seed: 2 },
+  { name: "Team 3", seed: 3 },
+  { name: "Team 4", seed: 4 },
+  { name: "Team 5", seed: 5 },
+  { name: "Dummy Team", seed: 6 }
+];
+
+
+
 const Solo: React.FC = () => {
   const [selectedTab, setSelectedTab] = useState(0);
 
@@ -44,6 +56,7 @@ const Solo: React.FC = () => {
     setSelectedTab(newValue);
   };
   
+
   return (
     <ThemeProvider theme={theme}>
      <div
@@ -156,7 +169,9 @@ const Solo: React.FC = () => {
     </div>
       )}
        {selectedTab === 3 && (
-        <Typography>This is the content of Tab 4</Typography>
+               <div>
+                <TournamentBracket teams={teams} />
+             </div>
       )}
        {selectedTab === 4 && (
         <Typography>This is the content of Tab 5</Typography>
