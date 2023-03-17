@@ -6,10 +6,19 @@ import Button from '@mui/material/Button';
 import { border, Container } from '@mui/system';
 import Navbar from './Navbar';
 import { Box } from '@mui/material';
+import { getTournament, Tournament } from '../services/TournamentService';
 
 
 
 const Home: React.FC = () => {
+  const displayTournaments = (tournaments: Tournament[]) => {
+    console.log(tournaments);
+  };
+
+  const onClick = () => {
+    getTournament().then((tournaments) => displayTournaments(tournaments));
+  };
+
   return (
     <div
       style={{
@@ -51,6 +60,7 @@ const Home: React.FC = () => {
                 borderColor: 'transparent'
               }}}>
             SIGN-UP INFO BELLOW
+            <Button onClick={onClick}>LMAO</Button>
           </Typography>
         </Container>
       </ThemeProvider>
