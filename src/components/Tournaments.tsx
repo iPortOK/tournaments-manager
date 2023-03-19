@@ -2,8 +2,6 @@ import { ThemeProvider } from '@emotion/react';
 import { Button, Grid } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import { Box } from '@mui/system';
-import React from 'react';
-import Navbar from './Navbar';
 import theme from './theme';
 import { Link } from 'react-router-dom';
 
@@ -35,7 +33,6 @@ const Tournaments = () => {
           backgroundRepeat: 'no-repeat',
         }}
       >
-        <Navbar />
         <Grid container sx={{ textAlign: 'center' }}>
           {tournaments.map(({ text, color, link, next }, index) => (
             <Grid key={index} item xs={6}>

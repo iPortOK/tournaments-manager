@@ -4,7 +4,6 @@ import Typography from '@mui/material/Typography';
 import theme from './theme';
 import Button from '@mui/material/Button';
 import { border, Container } from '@mui/system';
-import Navbar from './Navbar';
 import { Box } from '@mui/material';
 import { getTournament, Tournament } from '../services/TournamentService';
 
@@ -15,9 +14,6 @@ const Home: React.FC = () => {
     console.log(tournaments);
   };
 
-  const onClick = () => {
-    getTournament().then((tournaments) => displayTournaments(tournaments));
-  };
 
   return (
     <div
@@ -30,7 +26,6 @@ const Home: React.FC = () => {
       }}
     >
       <ThemeProvider theme={theme}>
-      <Navbar/>
         <Container maxWidth="xl" sx={{ textAlign: { xs: 'center', md: 'initial' } }}>
           <Typography
             variant="h1"
@@ -60,7 +55,6 @@ const Home: React.FC = () => {
                 borderColor: 'transparent'
               }}}>
             SIGN-UP INFO BELLOW
-            <Button onClick={onClick}>LMAO</Button>
           </Typography>
         </Container>
       </ThemeProvider>

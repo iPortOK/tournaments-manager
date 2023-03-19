@@ -1,7 +1,6 @@
 import { ThemeProvider } from '@emotion/react';
 import Typography from '@mui/material/Typography';
 import React from 'react';
-import Navbar from './Navbar';
 import theme from './theme';
 
 const lft: React.FC = () => {
@@ -31,7 +30,6 @@ const lft: React.FC = () => {
         }}
       ></div>
 
-      <Navbar/>
 
       </div>
     </ThemeProvider>

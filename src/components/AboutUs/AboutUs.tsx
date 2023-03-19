@@ -1,8 +1,7 @@
 import { ThemeProvider } from '@emotion/react';
-import { Box } from '@mui/material';
+import { Box, Grid } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import React from 'react';
-import Navbar from '../Navbar';
 import theme from '../theme';
 
 const AboutUs: React.FC = () => {
@@ -32,9 +31,8 @@ const AboutUs: React.FC = () => {
           zIndex:'-1',
         }}
       ></div>
-
-      <Navbar/>
-
+    <Grid container>
+     <Grid item md={12} lg={7}>
       <Box sx={{p: 5, pl:{xs:5, sm:10}, pr:{xs:5, sm:10} }} >
             <Typography variant="h2" component="h2" sx={{fontWeight:750, pr: { xs: 0, sm: 2 } }}>
             ABOUT ME
@@ -57,6 +55,17 @@ const AboutUs: React.FC = () => {
             🔸So if you love gaming as much as I do and want to be part of an amazing community of gamers, then join us today and let's take our gaming experience to the next level!
             </Typography>
           </Box>
+      </Grid>
+      <Grid item lg={5} sx={{display: { md: 'none', lg: 'flex' }}}>
+        <Box sx={{  height: '70vh',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    ml:15}}>
+            <img src="http://cdn.onlinewebfonts.com/svg/img_510068.png" width="450" height="450" alt="" />
+        </Box>
+      </Grid>    
+    </Grid>     
           
       </div>
     </ThemeProvider>

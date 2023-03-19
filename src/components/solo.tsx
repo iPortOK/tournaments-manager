@@ -1,7 +1,6 @@
 import { ThemeProvider } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import React, { useState } from 'react';
-import Navbar from './Navbar';
 import theme from './theme';
 import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
@@ -82,8 +81,6 @@ const Solo: React.FC = () => {
           zIndex:'-1',
         }}
       ></div>
-
-      <Navbar/>
 
       <Tabs value={selectedTab} onChange={handleTabChange} sx={{boxShadow: "1px 1px 10px rgba(0,0,0,0.35)"}}>
         {tabsy.map((label) => (

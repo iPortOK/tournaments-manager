@@ -13,7 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { Link } from 'react-router-dom';
 
-const pages = ['home', 'tournaments', 'players', 'lft','about-us'];
+const pages = ['Home', 'Tournaments', 'Players', 'LFT','About-Us'];
 const settings = ['Profile', 'Logout'];
 
 const Navbar = () => {
@@ -38,18 +38,8 @@ const Navbar = () => {
   return (
 <AppBar sx={{
   position: "sticky",
-  backgroundColor:"transparent",
+  backgroundColor:"#141212",
   boxShadow: "0 5px 20px rgba(0,0,0,0.55)",
-  '&::before': {
-    content: '""',
-    position: "absolute",
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    backgroundColor: "black",
-    opacity: 0.8
-  }
 }}>
 
       <Container maxWidth="xl">
@@ -137,26 +127,11 @@ const Navbar = () => {
               ))}
             </Menu>
           </Box>
-          <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
+
+          <Box sx={{ flexGrow:1, display: { xs: 'flex', md: 'none' } }}>
           <img src='../img/logo1.png'  width="80" height="80"></img>
           </Box>
-          <Typography
-            variant="h4"
-            noWrap
-            component="a"
-            href=""
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-          </Typography>
+          
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
@@ -177,7 +152,8 @@ const Navbar = () => {
             ))}
           </Box>
 
-          <Box sx={{ flexGrow: 0}}>
+
+          <Box sx={{ flexGrow: 0, }}>
             <Tooltip title="Open">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}> 
                 <Avatar alt="Port" src="/static/images/avatar/2.jpg" />
@@ -206,6 +182,11 @@ const Navbar = () => {
               ))}
             </Menu>
           </Box>
+
+          <Box onClick={handleOpenUserMenu} sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' }, color: '#f08a12', cursor:'pointer' }}>
+            <Typography variant="h6" sx={{ml:1.5}}> Zounek </Typography>
+          </Box>
+          
         </Toolbar>
       </Container>
     </AppBar>

@@ -4,7 +4,7 @@ import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper
 import theme from './theme';
 import './style.css';
 import { ThemeProvider } from '@emotion/react';
-import Navbar from './Navbar';
+
 
 interface PlayerData {
   name: string;
@@ -68,7 +68,6 @@ function PlayerTable() {
 
   return (
 <ThemeProvider theme={theme}>
-  <Navbar />
   <div
     style={{
       position: "relative",
