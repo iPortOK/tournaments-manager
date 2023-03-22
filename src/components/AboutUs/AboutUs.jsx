@@ -4,7 +4,7 @@ import Typography from '@mui/material/Typography';
 import React from 'react';
 import theme from '../theme';
 
-const AboutUs: React.FC = () => {
+const AboutUs = () => {
   return (
     
     <ThemeProvider theme={theme}>

@@ -9,8 +9,8 @@ import { getTournament, Tournament } from '../services/TournamentService';
 
 
 
-const Home: React.FC = () => {
-  const displayTournaments = (tournaments: Tournament[]) => {
+const Home = () => {
+  const displayTournaments = (tournaments) => {
     console.log(tournaments);
   };
 

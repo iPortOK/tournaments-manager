@@ -5,7 +5,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import theme from '../theme';
 
-const Loginform: React.FC = () => {
+const Loginform = () => {
   return (
     <ThemeProvider theme={theme}>
     <div

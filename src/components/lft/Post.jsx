@@ -7,16 +7,7 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import Comments from "./comments";
 import React from "react";
 
-interface PostProps {
-  post: {
-    desc: string;
-    name: string;
-    img: string;
-    profilePicurl: string;
-  };
-}
-
-const Post = ({ post }: PostProps) => { 
+const Post = ({ post }) => { 
 
   const [commentOpen, setCommentOpen] = React.useState(false);
 

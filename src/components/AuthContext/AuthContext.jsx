@@ -1,8 +1,8 @@
 import React, { createContext, useState, useEffect } from 'react';
 
-export const AuthContext = createContext<{ currentUser: any; login: () => void }>({ currentUser: null, login: () => {} });
+export const AuthContext = createContext();
 
-export const AuthContextProvider = ({ children }: { children: React.ReactNode }) => {
+export const AuthContextProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(JSON.parse(localStorage.getItem('user') || 'null'));
 
   const login = () => {

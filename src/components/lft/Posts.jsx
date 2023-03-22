@@ -1,6 +1,5 @@
 import { ThemeProvider } from '@emotion/react';
-import { Box, TextField, TableContainer, Paper, Table, TableHead, TableRow, TableCell, TableSortLabel, TableBody, Container } from '@mui/material';
-import React from 'react'
+import { Container } from '@mui/material';
 import theme from '../theme';
 import Post from './Post';
 

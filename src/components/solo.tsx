@@ -167,7 +167,7 @@ const Solo: React.FC = () => {
       )}
        {selectedTab === 3 && (
                <div>
-                <TournamentBracket teams={teams} />
+        <Typography>This is the content of Tab 4</Typography>
              </div>
       )}
        {selectedTab === 4 && (

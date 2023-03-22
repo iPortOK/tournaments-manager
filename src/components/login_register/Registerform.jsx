@@ -6,7 +6,7 @@ import React from 'react';
 import { Form, Link } from 'react-router-dom';
 import theme from '../theme';
 
-const Registerform: React.FC = () => {
+const Registerform = () => {
   return (
     <ThemeProvider theme={theme}>
         <div
