@@ -13,7 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { Link } from 'react-router-dom';
 
-const pages = ['Home', 'Tournaments', 'Players', 'LFT','About-Us'];
+const pages = ['Home', 'Tournaments', 'Players', 'Posts','About-Us'];
 const settings = ['Profile', 'Logout'];
 
 const Navbar = () => {

@@ -14,7 +14,6 @@ const Home: React.FC = () => {
     console.log(tournaments);
   };
 
-
   return (
     <div
       style={{

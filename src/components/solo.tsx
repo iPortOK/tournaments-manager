@@ -12,7 +12,7 @@ import TeamCard from './teamcard';
 import TournamentBracket from './bracket';
 
 
-const tabsy = ["Sign-Ups", "Quick Rules", "Teams", "Bracket", "Results"];
+const tabsy = ["Sign-Ups", "Quick Rules", "Teams", "Bracket", "Results"] ;
 
 const teamData = [
   {
@@ -84,7 +84,7 @@ const Solo: React.FC = () => {
 
       <Tabs value={selectedTab} onChange={handleTabChange} sx={{boxShadow: "1px 1px 10px rgba(0,0,0,0.35)"}}>
         {tabsy.map((label) => (
-          <Tab key={label} sx={{p: 3, fontSize: 16, color: 'black'}} label={label} />
+          <Tab key={label} sx={{p:{xs:1, md:3}, fontSize: {xs: 13, md:17}, color: 'black'}} label={label} />
         ))}
       </Tabs>
       
