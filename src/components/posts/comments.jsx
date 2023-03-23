@@ -1,7 +1,8 @@
-import { Button } from '@mui/material';
+import { Avatar, Button } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import { useContext } from 'react'
 import {AuthContext} from '../../Auth/AuthContext';
+import { TextField } from '@mui/material';
 
 const Comments = () => {
 
@@ -27,17 +28,17 @@ const Comments = () => {
       ];
 
   return (
-    <div>
-        <div>
-            <img alt="" src={currentUser.profilePic}></img>
-            <input type="text" placeholder='Write a comment'/>
-            <Button></Button>
-        </div>
+    <div style={{borderTop: "1px solid #585858"}}>
+      <div style={{display:'flex', alignItems:'center', justifyContent:'center'}}>
+        <Avatar src={currentUser.profilePic} sx={{ width: 45, height: 45, marginBottom:2}}/>
+        <TextField  id="outlined-multiline-flexible" multiline maxRows={4} label="Write a comment" variant="outlined" fullWidth sx={{m:2}} />
+        <Button sx={{p:2, mb:2}} variant="outlined" >Send</Button>
+      </div>
 
        {comments.map((comment) => (
         <div style={{marginLeft:30, marginRight:30}}>
             <div style={{display:'flex', marginBottom:-18,}}>
-                <img src={comment.profilePicurl} style={{borderRadius:'50%',height:45, width:45, marginTop:3 }} alt="" />
+                <Avatar src={comment.profilePicurl} sx={{ width: 45, height: 45 }}/>
                 <Typography variant="h6" component="h2" sx={{mt:0, ml:2}}>{comment.name}</Typography>
             </div>
 

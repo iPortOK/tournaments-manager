@@ -144,6 +144,7 @@ const Navbar = () => {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 3, color: 'white', display: 'block' }}
               >
+                <Link to=""></Link>
                 <Link style={{
                     fontFamily: 'monospace',
                     letterSpacing: '.1rem',

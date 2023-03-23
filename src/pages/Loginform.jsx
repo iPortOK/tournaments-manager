@@ -47,7 +47,7 @@ const Loginform = () => {
       <form style={{ display: 'flex', flexDirection: 'column',width:350}}>
       <TextField variant="filled" label="Username" type="text" />
       <TextField variant="filled" label="Password" type="Password"/>
-      <Button variant="contained"o nClick={handleLogin}>Login</Button>
+      <Button variant="contained" onClick={handleLogin}>Login</Button>
       </form>
     <Typography variant="body1" sx={{mt:4}} color="#363636" >Don't you have an account?</Typography>
     <Link to={'/register'}>

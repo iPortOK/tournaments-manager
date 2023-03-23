@@ -4,7 +4,6 @@ import theme from '../components/theme';
 import { Container } from '@mui/system';
 import { Box } from '@mui/material';
 
-
 const LandingPage = () => {
 
 

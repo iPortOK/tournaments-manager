@@ -2,6 +2,7 @@ import { ThemeProvider } from '@emotion/react';
 import { Container } from '@mui/material';
 import theme from '../components/theme';
 import Post from '../components/posts/Post';
+import Typepost from '../components/posts/Typepost';
 
 const Posts = () => {
 
@@ -51,7 +52,9 @@ const Posts = () => {
       }}
     ></div>
     
+
     <Container maxWidth="md">
+    <Typepost/>
     <div>
         {posts.map((post) => (
             <Post post={post} key={post.id} />

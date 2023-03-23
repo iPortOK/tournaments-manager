@@ -5,6 +5,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import Comments from "./comments";
 import React from "react";
+import Avatar from '@mui/material/Avatar';
 
 const Post = ({ post }) => { 
 
@@ -13,11 +14,11 @@ const Post = ({ post }) => {
   const liked = false;
 
   return (
-
+    
     <Card sx={{m:2, pl:1.5, pr:1.5, pt:1, borderRadius:3, boxShadow: "1px 1px 10px rgba(0,0,0,0.25)", backgroundColor: 'rgba(255, 255, 255, 0.7)' }}>
       <CardContent>
         <Box sx={{display:'flex',}}>
-        <img src={post.profilePicurl} alt="" style={{borderRadius:'50%',height:60, width:60 }}/>
+        <Avatar src={post.profilePicurl} sx={{ width: 60, height: 60 }}/>
         <div style={{marginLeft:15}}>
         <Typography variant="h6" component="h2" >
           {post.name}
@@ -37,11 +38,11 @@ const Post = ({ post }) => {
         </Box>
         
         <Box sx={{display:'flex', alignItems:'center', mb:-2}}>
-        <div style={{display:'flex'}}>
+        <div style={{display:'flex', cursor: 'pointer'}}>
         {liked ? <FavoriteIcon/> : <FavoriteBorderIcon/> }
         <Typography sx={{ml:1, mr:3}}>10 Likes</Typography>
         </div>
-        <div style={{display:'flex'}} onClick={()=>setCommentOpen(!commentOpen)}>
+        <div style={{display:'flex', cursor: 'pointer'}} onClick={()=>setCommentOpen(!commentOpen)}>
         <MessageIcon/>
         <Typography sx={{ml:1}}  >10 Comments</Typography>
         </div>
