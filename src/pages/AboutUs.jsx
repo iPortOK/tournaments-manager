@@ -2,7 +2,7 @@ import { ThemeProvider } from '@emotion/react';
 import { Box, Grid } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import React from 'react';
-import theme from '../theme';
+import theme from '../components/theme';
 
 const AboutUs = () => {
   return (

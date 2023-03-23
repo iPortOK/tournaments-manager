@@ -2,7 +2,7 @@ import { ThemeProvider } from '@emotion/react';
 import { Button, Grid } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import { Box } from '@mui/system';
-import theme from './theme';
+import theme from '../components/theme';
 import { Link } from 'react-router-dom';
 
 const Tournaments = () => {

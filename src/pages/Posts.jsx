@@ -1,7 +1,7 @@
 import { ThemeProvider } from '@emotion/react';
 import { Container } from '@mui/material';
-import theme from '../theme';
-import Post from './Post';
+import theme from '../components/theme';
+import Post from '../components/posts/Post';
 
 const Posts = () => {
 

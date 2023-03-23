@@ -1,7 +1,7 @@
 import { Button } from '@mui/material';
 import Typography from '@mui/material/Typography';
-import React, { useContext } from 'react'
-import {AuthContext} from '../AuthContext/AuthContext';
+import { useContext } from 'react'
+import {AuthContext} from '../../Auth/AuthContext';
 
 const Comments = () => {
 
@@ -29,7 +29,7 @@ const Comments = () => {
   return (
     <div>
         <div>
-            <img src={currentUser.profilePicurl}></img>
+            <img alt="" src={currentUser.profilePic}></img>
             <input type="text" placeholder='Write a comment'/>
             <Button></Button>
         </div>

@@ -1,10 +1,4 @@
-import { Box } from '@mui/material';
-import Button from '@mui/material/Button'
-import React from 'react'
 import './footer.css';
-
-
-
 
 const Spodek = () => {
   const year = new Date().getFullYear();

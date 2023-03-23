@@ -1,5 +1,4 @@
-import { Box, Button, Card, CardContent, Container, Link, TextField, ThemeProvider, Typography } from "@mui/material";
-import theme from "../theme";
+import { Box, Card, CardContent, Typography } from "@mui/material";
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import MessageIcon from '@mui/icons-material/Message';
 import FavoriteIcon from '@mui/icons-material/Favorite';

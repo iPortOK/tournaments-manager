@@ -12,11 +12,16 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { Link } from 'react-router-dom';
+import { AuthContext } from "../../Auth/AuthContext";
+import { useContext } from "react";
 
 const pages = ['Home', 'Tournaments', 'Players', 'Posts','About-Us'];
 const settings = ['Profile', 'Logout'];
 
 const Navbar = () => {
+
+  const { currentUser } = useContext(AuthContext);
+  
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -46,7 +51,7 @@ const Navbar = () => {
         <Toolbar disableGutters>
  
         <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-            <img src='../img/logo1.png'  width="90" height="90"></img>
+            <img alt="" src='../img/logo1.png'  width="90" height="90"></img>
         </Box>
         
           <Typography
@@ -129,7 +134,7 @@ const Navbar = () => {
           </Box>
 
           <Box sx={{ flexGrow:1, display: { xs: 'flex', md: 'none' } }}>
-          <img src='../img/logo1.png'  width="80" height="80"></img>
+          <img alt="" src='../img/logo1.png'  width="80" height="80"></img>
           </Box>
           
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
@@ -156,7 +161,7 @@ const Navbar = () => {
           <Box sx={{ flexGrow: 0, }}>
             <Tooltip title="Open">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}> 
-                <Avatar alt="Port" src="/static/images/avatar/2.jpg" />
+                <Avatar alt="Port" src={currentUser.profilePic} />
               </IconButton>
             </Tooltip>
             <Menu
@@ -184,7 +189,7 @@ const Navbar = () => {
           </Box>
 
           <Box onClick={handleOpenUserMenu} sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' }, color: '#f08a12', cursor:'pointer' }}>
-            <Typography variant="h6" sx={{ml:1.5}}> Zounek </Typography>
+            <Typography variant="h6" sx={{ml:1.5}}> {currentUser.name} </Typography>
           </Box>
           
         </Toolbar>

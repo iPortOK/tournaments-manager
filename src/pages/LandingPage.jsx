@@ -1,18 +1,12 @@
-import React from 'react';
 import { ThemeProvider } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
-import theme from './theme';
-import Button from '@mui/material/Button';
-import { border, Container } from '@mui/system';
+import theme from '../components/theme';
+import { Container } from '@mui/system';
 import { Box } from '@mui/material';
-import { getTournament, Tournament } from '../services/TournamentService';
 
 
+const LandingPage = () => {
 
-const Home = () => {
-  const displayTournaments = (tournaments) => {
-    console.log(tournaments);
-  };
 
   return (
     <div
@@ -61,4 +55,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default LandingPage;

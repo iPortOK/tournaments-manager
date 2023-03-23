@@ -1,11 +1,19 @@
 import { ThemeProvider } from '@emotion/react';
 import { Container, Box, TextField, Button } from '@mui/material';
 import Typography from '@mui/material/Typography';
-import React from 'react';
 import { Link } from 'react-router-dom';
-import theme from '../theme';
+import theme from '../components/theme';
+import { useContext } from 'react';
+import { AuthContext } from '../Auth/AuthContext';
 
 const Loginform = () => {
+
+  const { login } = useContext(AuthContext);
+
+  const handleLogin = () => {
+    login();
+  };
+
   return (
     <ThemeProvider theme={theme}>
     <div
@@ -39,7 +47,7 @@ const Loginform = () => {
       <form style={{ display: 'flex', flexDirection: 'column',width:350}}>
       <TextField variant="filled" label="Username" type="text" />
       <TextField variant="filled" label="Password" type="Password"/>
-      <Button variant="contained">Login</Button>
+      <Button variant="contained"o nClick={handleLogin}>Login</Button>
       </form>
     <Typography variant="body1" sx={{mt:4}} color="#363636" >Don't you have an account?</Typography>
     <Link to={'/register'}>

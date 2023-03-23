@@ -1,12 +1,12 @@
 import { ThemeProvider } from '@emotion/react';
-import { Container, Box, Grid, Button } from '@mui/material';
+import { Container, Box, Button } from '@mui/material';
 import TextField from '@mui/material/TextField/TextField';
 import Typography from '@mui/material/Typography';
-import React from 'react';
-import { Form, Link } from 'react-router-dom';
-import theme from '../theme';
+import {Link } from 'react-router-dom';
+import theme from '../components/theme';
 
 const Registerform = () => {
+  
   return (
     <ThemeProvider theme={theme}>
         <div

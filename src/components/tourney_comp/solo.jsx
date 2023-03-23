@@ -1,7 +1,7 @@
 import { ThemeProvider } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import React, { useState } from 'react';
-import theme from './theme';
+import theme from '../theme';
 import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
 import Tabs from '@mui/material/Tabs';
@@ -46,12 +46,10 @@ const teams = [
   { name: "Dummy Team", seed: 6 }
 ];
 
-
-
-const Solo: React.FC = () => {
+const Solo = () => {
   const [selectedTab, setSelectedTab] = useState(0);
 
-  const handleTabChange = (event: React.SyntheticEvent, newValue: number) => {
+  const handleTabChange =  (event, newValue) => {
     setSelectedTab(newValue);
   };
   
